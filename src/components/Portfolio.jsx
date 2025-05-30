@@ -2,6 +2,22 @@ import { useState } from 'react';
 import '../assets/portfolio.css';
 import Modal from './Modal';
 
+// Import all local images
+import sqlIcon from '/src/assets/images/sql-database.svg';
+import asmIcon from '/src/assets/images/asm.png';
+import netFrameworkIcon from '/src/assets/images/netFramework.png';
+import jakartaEEIcon from '/src/assets/images/jakarta_ee.svg';
+import mysqlIcon from '/src/assets/images/mysql_logo.svg';
+import sqliteIcon from '/src/assets/images/sqlite.svg';
+import esp32Icon from '/src/assets/images/ESP32.png';
+import blynkIcon from '/src/assets/images/blynk.png';
+import githubIcon from '/src/assets/images/github.png';
+import xamppIcon from '/src/assets/images/xampp.svg';
+import msOfficeIcon from '/src/assets/images/Microsoft_Office.svg';
+import pokeHallLogo from '/src/assets/images/PokeHall-Logo.svg';
+import hydroponicsImg from '/src/assets/images/Hydroponics_Project.png';
+import ticketEaseLogo from '/src/assets/images/Ticket_Ease.svg';
+import dkPetshopLogo from '/src/assets/images/DK-Petshop_Logo.svg';
 
 export const skillCategories = [
     {
@@ -13,8 +29,8 @@ export const skillCategories = [
         { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg' },
         { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg' },
         { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
-        { name: 'SQL', icon: '/src/assets/images/sql-database.svg', isLocalImage: true },
-        { name: 'Assembly', icon: '/src/assets/images/asm.png', isLocalImage: true }
+        { name: 'SQL', icon: sqlIcon },
+        { name: 'Assembly', icon: asmIcon }
       ]
     },
     {
@@ -30,19 +46,19 @@ export const skillCategories = [
     {
       title: '🛠 Backend Development',
       skills: [
-        { name: '.NET Framework', icon: '/src/assets/images/netFramework.png', isLocalImage: true },
+        { name: '.NET Framework', icon: netFrameworkIcon },
         { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg' },
         { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg' },
         { name: 'Laravel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
         { name: 'Spring MVC', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
-        { name: 'Jakarta EE', icon: '/src/assets/images/jakarta_ee.svg', isLocalImage: true }
+        { name: 'Jakarta EE', icon: jakartaEEIcon }
       ]
     },
     {
       title: '🗄 Databases & Cloud Services',
       skills: [
-        { name: 'MySQL', icon: '/src/assets/images/mysql_logo.svg', isLocalImage: true },
-        { name: 'SQLite', icon: '/src/assets/images/sqlite.svg', isLocalImage: true },
+        { name: 'MySQL', icon: mysqlIcon },
+        { name: 'SQLite', icon: sqliteIcon },
         { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg' }
       ]
     },
@@ -56,23 +72,23 @@ export const skillCategories = [
       title: '🔌 IoT & Embedded Systems',
       skills: [
         { name: 'Arduino', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original.svg' },
-        { name: 'ESP32', icon: '/src/assets/images/ESP32.png', isLocalImage: true },
-        { name: 'Blynk', icon: '/src/assets/images/blynk.png', isLocalImage: true }
+        { name: 'ESP32', icon: esp32Icon },
+        { name: 'Blynk', icon: blynkIcon }
       ]
     },
     {
       title: '🧰 Tools & Platforms',
       skills: [
         { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
-        { name: 'GitHub', icon: '/src/assets/images/github.png', isLocalImage: true },
+        { name: 'GitHub', icon: githubIcon },
         { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg' },
         { name: 'Visual Studio', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg' },
         { name: 'Eclipse IDE', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg' },
         { name: 'Android Studio', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg' },
-        { name: 'XAMPP', icon: '/src/assets/images/xampp.svg', isLocalImage: true },
+        { name: 'XAMPP', icon: xamppIcon },
         { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg' },
         { name: 'Canva', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg' },
-        { name: 'Microsoft Office', icon: '/src/assets/images/Microsoft_Office.svg', isLocalImage: true }
+        { name: 'Microsoft Office', icon: msOfficeIcon }
       ]
     },
     {
@@ -96,7 +112,7 @@ function Portfolio() {
     id: 1,
     title: "PokeHall",
     subtitle: "Mobile App for Building Pokémon Teams",
-    image: "/src/assets/images/PokeHall-Logo.svg",
+    image: pokeHallLogo,
     features: [
       "Choose from Pokémon in Gen 1–5 mainline games",
       "Team-building interface with visual previews",
@@ -115,7 +131,7 @@ function Portfolio() {
     id: 2,
     title: "Hydroponics Monitoring App",
     subtitle: "Thesis IoT-based Plant Monitoring System",
-    image: "/src/assets/images/Hydroponics_Project.png",
+    image: hydroponicsImg,
     summary: "This mobile app serves as the frontend interface for an IoT hydroponics system built as a thesis project. It helps users monitor and manage key plant health indicators for Pechay in real time.",
     features: [
       "Live readings of air temp, water temp, humidity, pH, and TDS",
@@ -207,7 +223,7 @@ function Portfolio() {
     id: 7,
     title: "TicketEase",
     subtitle: "Desktop-Based Concert Ticketing System",
-    image: "/src/assets/images/Ticket_Ease.svg",
+    image: ticketEaseLogo,
     summary: "TicketEase is a concert ticketing and management desktop application tailored for both artists hosting concerts and fans purchasing seats. Designed for the Philippine concert scene.",
     features: [
       "Artist and fan registration/login",
@@ -225,9 +241,9 @@ function Portfolio() {
   },
   {
     id: 8,
-    title: "DK’s Petshop",
+    title: "DK's Petshop",
     subtitle: "E-Commerce Desktop Application for Pet Inventory Management",
-    image: "/src/assets/images/DK-Petshop_Logo.svg",
+    image: dkPetshopLogo,
     summary: "An inventory management desktop application for a pet shop, offering both admin-level product control and user-level purchasing functionality. This project marked my first complete full-stack experience.",
     features: [
       "Admin: Add, update, delete, restock products",
@@ -308,11 +324,7 @@ function Portfolio() {
                       {category.skills.map((skill, idx) => (
                         <div className="tech-card" key={idx}>
                           <div className="tech-card-icon">
-                            {skill.isLocalImage ? (
-                              <img src={skill.icon} alt={skill.name} className={`tech-local-icon ${skill.customClass || ''}`} />
-                            ) : (
-                              <img src={skill.icon} alt={skill.name} className={`tech-svg-icon ${skill.customClass || ''}`} />
-                            )}
+                            <img src={skill.icon} alt={skill.name} className="tech-svg-icon" />
                           </div>
                           <div className="tech-card-label">{skill.name}</div>
                         </div>

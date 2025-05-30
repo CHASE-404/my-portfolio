@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 function Header({ timeClass }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  
   // Smooth scroll function for navigation links
   const handleNavClick = (e) => {
     e.preventDefault();
@@ -7,6 +11,7 @@ function Header({ timeClass }) {
     
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false); // Close menu after clicking
     }
   };
 
@@ -15,7 +20,12 @@ function Header({ timeClass }) {
       <div className="container">
         <div className="header-content">
           <div className="logo">My Portfolio</div>
-          <nav className="main-nav">
+          <div className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(!menuOpen)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav className={`main-nav ${menuOpen ? 'active' : ''}`}>
             <ul>
               <li><a href="#about" onClick={handleNavClick}>About</a></li>
               <li><a href="#portfolio" onClick={handleNavClick}>Portfolio</a></li>

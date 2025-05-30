@@ -61,7 +61,7 @@ function App() {
     <div className="hero-section">
       <div className="container h-100">
         <div className="row h-100 align-items-center">
-          <div className="col-lg-7">
+          <div className="col-lg-7 text-center text-lg-start">
             <h4 className={`greeting-text ${timeClass}-greeting`}>{greeting}!</h4>
             <p className={`time-phrase ${timeClass}-phrase`}>{timePhrase}</p>
             <h1 className="hero-title">From Vision to Reality: Creating Impactful Digital Solutions</h1>
